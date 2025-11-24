@@ -21,7 +21,7 @@ type InstanceTree = {
 	Children: { InstanceTree }?,
 }
 
-local function CreateInstanceTree(Tree: InstanceTree): Instance
+local function CreateInstanceTree<T>(Tree: InstanceTree): Instance
 	local Object: Instance
 	if Tree.Instance then
 		Object = Tree.Instance:Clone()
